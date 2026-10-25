@@ -1,0 +1,25 @@
+name: Build Sideline
+on: [push, workflow_dispatch]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip the project
+        run: mkdir src && unzip -q Sideline.zip -d src
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build the APK
+        working-directory: src
+        run: chmod +x gradlew && ./gradlew --no-daemon testDebugUnitTest assembleRelease
+      - name: Publish the APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: Sideline build ${{ github.run_number }}
+          files: src/app/build/outputs/apk/release/app-release.apk
