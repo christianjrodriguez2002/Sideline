@@ -17,9 +17,14 @@ jobs:
       - name: Build the APK
         working-directory: src
         run: chmod +x gradlew && ./gradlew --no-daemon testDebugUnitTest assembleRelease
+      - name: Name the APK after the version
+        run: |
+          V=$(grep -oP 'versionName = "\K[^"]+' src/app/build.gradle.kts)
+          echo "VERSION=$V" >> $GITHUB_ENV
+          cp src/app/build/outputs/apk/release/app-release.apk "Sideline-$V.apk"
       - name: Publish the APK
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: build-${{ github.run_number }}
-          name: Sideline build ${{ github.run_number }}
-          files: src/app/build/outputs/apk/release/app-release.apk
+          tag_name: v${{ env.VERSION }}-build${{ github.run_number }}
+          name: Sideline ${{ env.VERSION }}
+          files: Sideline-${{ env.VERSION }}.apk
