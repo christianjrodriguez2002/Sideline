@@ -2,8 +2,8 @@
 
 Made by Roki Rodriguez.
 
-A personal, all-sports Android app with a dark, broadcast-style look. Built on ESPN's public data feeds: no account,
-no API key, no ads, no tracking. Everything you set up stays on your phone.
+A personal, all-sports Android app built on ESPN's public data. No account required,
+no API keys required, no ads, no tracking. Everything stays on your phone.
 
 ## Sports
 
