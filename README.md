@@ -53,11 +53,6 @@ TV areas are approximate. Blackouts and your provider still apply.
 Header photos are real photographs from Wikimedia Commons under free licenses, credited in Settings. League and team
 logos and player photos come from ESPN.
 
-## Install
-
-Download the latest `Sideline-<version>.apk` from Releases and open it on your phone. Every build is signed with the
-same key, so a new version installs over the previous one.
-
 ## Notes
 
 - ESPN's feeds are public but unofficial. If a feed changes, that screen may come up empty until the parser is
