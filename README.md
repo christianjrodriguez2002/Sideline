@@ -39,7 +39,8 @@ no API keys are required, no ads, no tracking is done. Everything stays on your 
 - **Highlights (experimental)**: ESPN's latest clips, played in the app, for NFL, NBA, WNBA, NHL, college football and
   basketball, LaLiga and Bundesliga games. May be removed in a future update.
 - **Photos (experimental)**: game and event photos from ESPN's recaps and team and league news, full screen with
-  captions and credits. Mostly posted after the game. May be removed in a future update.
+  captions and credits. Only photos whose captions match the game or event are shown. Mostly posted after the game.
+  May be removed in a future update.
 - **Player pages**: bio, injury status, season and career stats, next game, news. Follow a player to add them to Home,
   or compare two players side by side.
 - **Golf scorecards**: tap a golfer on the leaderboard to see hole by hole scores when ESPN posts them.
